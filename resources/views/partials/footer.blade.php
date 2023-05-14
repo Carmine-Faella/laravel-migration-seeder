@@ -1,3 +1,3 @@
 <footer>
-    <h1>Qui va il footer</h1>
+    <h1 class="text-white py-3 text-center">Made by Boolean</h1>
 </footer>

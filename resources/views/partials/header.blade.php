@@ -1,3 +1,3 @@
 <header>
-    <h1>Qui va l'header</h1>
+    <h1 class="text-white py-3 text-center">Treni in partenza</h1>
 </header>
