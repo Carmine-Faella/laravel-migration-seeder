@@ -29,7 +29,7 @@ class TrainsTableSeeder extends Seeder
                 $trains->Numero_Carrozze  = $faker->randomDigitNot(0);
                 $trains->In_orario = $faker->word();
                 $trains->Cancellato = $faker->word();
-                $trains->Data = $faker->date();
+                $trains->Data = $faker->dateTimeBetween('-0 day', '+0 day');
             
             $trains->save();
         }
