@@ -15,22 +15,28 @@
       <th scope="col">Numero carozza</th>
       <th scope="col">In arrivo</th>
       <th scope="col">Cancellato</th>
-      <th scope="col">Data</th>
     </tr>
   </thead>
   <tbody>
   @foreach ($trains as $train)
     <tr>
-            <td>{{$train->Azienda}}</td>
-            <td>{{$train->Stazione_di_partenza}}</td>
-            <td>{{$train->Stazione_di_arrivo}}</td>
-            <td>{{$train->Orario_di_partenza}}</td>
-            <td>{{$train->Orario_di_arrivo}}</td>
-            <td>{{$train->Codice_Treno}}</td>
-            <td>{{$train->Numero_Carrozze}}</td>
-            <td>{{$train->In_orario}}</td>
-            <td>{{$train->Cancellato}}</td>
-            <td>{{$train->Data}}</td>
+            <td>{{$train->company}}</td>
+            <td>{{$train->departure_station}}</td>
+            <td>{{$train->arrival_station}}</td>
+            <td>{{$train->departure_time}}</td>
+            <td>{{$train->arrival_time}}</td>
+            <td>{{$train->train_code}}</td>
+            <td>{{$train->wagons_number}}</td>
+            @if ($train->on_time == 1)
+              <td>Si</td>
+            @else
+              <td>No</td>
+            @endif
+            @if ($train->cancelled == 1)
+              <td>Si</td>
+            @else
+              <td>No</td>
+            @endif
     </tr>
     @endforeach
   </tbody>
